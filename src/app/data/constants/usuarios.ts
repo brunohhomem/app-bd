@@ -44,3 +44,5 @@ const usuarios: Usuario[] = [
     ativo: true
   }
 ]
+
+export default usuarios
