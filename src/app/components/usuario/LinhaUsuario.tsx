@@ -7,13 +7,18 @@ export interface LinhaUsuarioProps {
 }
 
 export default function LinhaUsuario(props: LinhaUsuarioProps) {
+  const timestamp = new Date().getTime()
+  const fotoUsuario = `http://source.unsplash.com/random/80x80?avatar&sig=${props.usuario.id}&${timestamp}`
+
+  // const fotoUsuario = 'http://source.unsplash.com/random/80x80?avatar'
+
   return (
     <div
       className="flex p-4 bg-zinc-900 rounded-md items-center gap-5 cursor-pointer"
       onClick={() => props.onClick?.(props.usuario)}
     >
       <Image
-        src="http://source.unsplash.com/random/80x80?avatar"
+        src={fotoUsuario}
         width={80}
         height={80}
         className="rounded-full"
