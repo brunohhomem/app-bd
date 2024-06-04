@@ -21,4 +21,10 @@ export default class RepositorioUsuario {
       create: usuario
     })
   }
+
+  static async excluir(id: string): Promise<void> {
+    await this.db.usuario.delete({
+      where: { id }
+    })
+  }
 }
