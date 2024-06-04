@@ -1,11 +1,13 @@
 import salvarUsuario from './usuario/salvarUsuario'
 import obterTodos from './usuario/obterTodos'
+import excluirUsuario from './usuario/excluirUsuario'
 
 //Padrão FACADE
 
 export default class Backend {
   static readonly usuarios = {
-    salvarUsuario,
-    obterTodos
+    salvar: salvarUsuario,
+    obter: obterTodos,
+    excluir: excluirUsuario
   }
 }
